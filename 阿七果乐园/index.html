@@ -1,0 +1,424 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/index.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+<!--top-->
+<div class="top">
+	<div class="top_div">
+    	<!--top左侧-->
+    	<div class="top_div_left">您好,欢迎来到阿七果园子！</div>
+        <!--top右侧-->
+        <ul class="top_ul_right">
+        	<li><a href="#">[登录]</a></li>
+            <li><a href="#"><span>[注册有惊喜]</span></a></li>
+            <li><a href="#">我的果园</a></li>
+            <li><a href="#">手机果园</a></li>
+            <li><img src="images/top_num.png" width="17" height="16" alt="num"/>400-720-0770	             	</li>
+        </ul>
+    </div>
+</div>
+<!--logo-->
+<div class="logo_div">
+	<div class="logo">
+    	<img src="images/logo.png"/>
+        <ul>
+        	<li><a href="#">热点搜索：</a></li>
+        	<li><a href="#">橙</a></li>
+        	<li><a href="#"><span>苹果</span></a></li>
+            <li><a href="#">香梨</a></li>
+            <li><a href="#">火龙果</a></li>
+            <li><a href="#">牛油果</a></li>
+            <li><a href="#">柠檬</a></li>
+        </ul>
+         <div class="search">
+        	<img src="images/search.png" width="15" height="15" alt="search"/>台湾芒果
+            <p class="search_p">搜索</p>
+        </div>
+        <div class="logo_address">
+           <div class="logo_address_1">配送至</div> 
+           <input type="text" value="济南"/> 
+           <div class="logo_address_2">全国满百顺丰包邮</div>
+        </div>
+    </div>
+
+</div>
+<!--导航-->
+<div class="nev">
+	<div class="nev_sp">
+    	<div class="nev_sp_div00">
+        	<div class="nev_sp_div01" onMouseOver="show(1)" onMouseOut="hide(1)">全部商品</div>
+                <ul class="add_ul1" id="ull1"  onMouseOver="show(1)" onMouseOut="hide(1)">
+                    <li onMouseOver="changeyellow(1)" onMouseOut="changenull(1)" id="lii1">所有鲜果</li>
+                    <li onMouseOver="changeyellow(2)" onMouseOut="changenull(2)"  id="lii2">所有鲜果</li>
+                    <li onMouseOver="changeyellow(3)" onMouseOut="changenull(3)"  id="lii3">所有鲜果</li>
+                    <li onMouseOver="changeyellow(4)" onMouseOut="changenull(4)"  id="lii4">所有鲜果</li>
+                    <li onMouseOver="changeyellow(5)" onMouseOut="changenull(5)"  id="lii5">所有鲜果</li>
+                </ul>
+             <div  class="nev_sp_div01"  onMouseOver="show(2)" onMouseOut="hide(2)">首页</div>
+            	<ul class="add_ul2" id="ull2"  onMouseOver="show(2)" onMouseOut="hide(2)">
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                </ul>
+              <div  class="nev_sp_div01"  onMouseOver="show(3)" onMouseOut="hide(3)">进口鲜果</div>
+            	<ul class="add_ul3" id="ull3" onMouseOver="show(3)" onMouseOut="hide(3)">
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                </ul>
+            <div  class="nev_sp_div01"  onMouseOver="show(4)" onMouseOut="hide(4)">国产鲜果</div>
+            	<ul class="add_ul4" id="ull4" onMouseOver="show(4)" onMouseOut="hide(4)">
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                </ul>
+             <div  class="nev_sp_div01"  onMouseOver="show(5)" onMouseOut="hide(5)">在线充值</div>
+            	<ul class="add_ul5" id="ull5" onMouseOver="show(5)" onMouseOut="hide(5)">
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                </ul>
+            <div  class="nev_sp_div01"  onMouseOver="show(6)" onMouseOut="hide(6)">团购配送</div>
+            	<ul class="add_ul6" id="ull6"  onMouseOver="show(6)" onMouseOut="hide(6)">
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                </ul>
+             <div  class="nev_sp_div01"  onMouseOver="show(7)" onMouseOut="hide(7)">其它</div>
+            	<ul class="add_ul7" id="ull7" onMouseOver="show(7)" onMouseOut="hide(7)">
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                    <li>所有鲜果</li>
+                </ul>
+        </div>
+        <div class="gouwuche"><img src="images/gouwuche.png"/><span>购物车</span></div>
+    </div>
+</div>
+<!--大图-->
+<div class="big_ph_div">
+<div class="big_ph"><img src="images/bid_ph.jpg" width="1000" height="406" alt="big_ph"/></div>
+</div>
+<!--抢购-->
+<div>
+	<div class="qg">
+       <div class="qg_1" onMouseOver="addyinying(1)" onMouseOut="addnull(1)" id="add1">
+        	<img src="images/qg.jpg" width="235" height="234" alt="qg"/>
+        	<img class="img_2" src="images/xianshi.jpg" width="61" height="64" alt="xianshi"/>
+            	<h2>越南小青芒5斤装</h2>
+                <span>越南进口 尽享热点甜蜜滋味</span>
+                <p class="qg_1_p1">02小时35分26秒</p>
+                <p class="qg_1_p2"><span class="red">￥39.00</span>  5斤<span class="huaxian">   原价46.00</span></p>
+           		<p class="qg_1_p3"><span >239人已购买</span>
+                	<p class="qg_1_p3_q">立即抢购</p>
+                </p>
+        </div>
+        <div class="qg_1" onMouseOver="addyinying(2)" onMouseOut="addnull(2)" id="add2">
+        	<img src="images/qg.jpg" width="235" height="234" alt="qg"/>
+        	<img class="img_2" src="images/xianshi.jpg" width="61" height="64" alt="xianshi"/>
+            	<h2>越南小青芒5斤装</h2>
+                <span>越南进口 尽享热点甜蜜滋味</span>
+                <p class="qg_1_p1">02小时35分26秒</p>
+                <p class="qg_1_p2"><span class="red">￥39.00</span>  5斤<span class="huaxian">   原价46.00</span></p>
+           		<p class="qg_1_p3"><span >239人已购买</span>
+                	<p class="qg_1_p3_q">立即抢购</p>
+                </p>
+        </div>
+        <div class="qg_1" onMouseOver="addyinying(3)" onMouseOut="addnull(3)" id="add3">
+        	<img src="images/qg.jpg" width="235" height="234" alt="qg"/>
+        	<img class="img_2" src="images/xianshi.jpg" width="61" height="64" alt="xianshi"/>
+            	<h2>越南小青芒5斤装</h2>
+                <span>越南进口 尽享热点甜蜜滋味</span>
+                <p class="qg_1_p1">02小时35分26秒</p>
+                <p class="qg_1_p2"><span class="red">￥39.00</span>  5斤<span class="huaxian">   原价46.00</span></p>
+           		<p class="qg_1_p3"><span >239人已购买</span>
+                	<p class="qg_1_p3_q">立即抢购</p>
+                </p>
+        </div>
+        <div class="qg_4" onMouseOver="addyinying(4)" onMouseOut="addnull(4)" id="add4">
+        	<img src="images/qg.jpg" width="235" height="234" alt="qg"/>
+        	<img class="img_2" src="images/xianshi.jpg" width="61" height="64" alt="xianshi"/>
+            	<h2>越南小青芒5斤装</h2>
+                <span>越南进口 尽享热点甜蜜滋味</span>
+                <p class="qg_4_p1">02小时35分26秒</p>
+                <p class="qg_4_p2"><span class="red">￥39.00</span>  5斤<span class="huaxian">   原价46.00</span></p>
+           		<p class="qg_4_p3"><span >239人已购买</span>
+                	<p class="qg_4_p3_q">立即抢购</p>
+                </p>
+        </div>
+    </div>
+</div>
+
+<!--优惠专区标题-->
+<div id="youhui_big">
+	<div class="youhui00">
+        <div class="youhui">优惠专区 <span>On sale time</span> </div>
+        <div class="more">more >></div>
+    </div>
+</div>
+<!-- 优惠下八图-->
+<div>
+	<div class="eight_ph">
+    	<div class="ph_1" onMouseOver="addyinying(5)" onMouseOut="addnull(5)" id="add5">
+        	<img src="images/eight.jpg"/>
+            <p class="eight_ph_1_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_1_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_1_p3">原价：￥52.80元</p>
+        </div>
+          <div class="ph_1" onMouseOver="addyinying(6)" onMouseOut="addnull(6)" id="add6">
+        	<img src="images/eight.jpg"/>
+            <p class="eight_ph_1_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_1_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_1_p3">原价：￥52.80元</p>
+        </div>
+         <div class="ph_1" onMouseOver="addyinying(7)" onMouseOut="addnull(7)" id="add7">
+        	<img src="images/eight.jpg"/>
+            <p class="eight_ph_1_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_1_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_1_p3">原价：￥52.80元</p>
+        </div>
+         <div class="ph_4" onMouseOver="addyinying(8)" onMouseOut="addnull(8)" id="add8">
+        	<img src="images/eight.jpg" width="214" height="228"/>
+            <p class="eight_ph_4_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_4_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_4_p3">原价：￥52.80元</p>
+        </div>
+        
+         <div class="ph_1" onMouseOver="addyinying(9)" onMouseOut="addnull(9)" id="add9">
+        	<img src="images/eight.jpg"/>
+            <p class="eight_ph_1_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_1_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_1_p3">原价：￥52.80元</p>
+        </div>
+        <div class="ph_1" onMouseOver="addyinying(10)" onMouseOut="addnull(10)" id="add10">
+        	<img src="images/eight.jpg"/>
+            <p class="eight_ph_1_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_1_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_1_p3">原价：￥52.80元</p>
+        </div>
+        <div class="ph_1" onMouseOver="addyinying(11)" onMouseOut="addnull(11)" id="add11">
+        	<img src="images/eight.jpg"/>
+            <p class="eight_ph_1_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_1_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_1_p3">原价：￥52.80元</p>
+        </div>
+         <div class="ph_4" onMouseOver="addyinying(12)" onMouseOut="addnull(12)" id="add12">
+        	<img src="images/eight.jpg" width="214" height="228"/>
+            <p class="eight_ph_4_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_4_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_4_p3">原价：￥52.80元</p>
+        </div>
+    
+    </div>
+</div>
+<!--花样礼盒标题-->
+<div id="huayang_big2">
+	<div class="huayang2">
+        <div class="huayang02">花样礼盒 <span>On sale time</span> </div>
+        <div class="more_2">more >></div>
+    </div>
+</div>
+<!--礼盒下前四个图-->
+<div>
+		<div class="eight_ph">
+    	 <div class="ph_1" onMouseOver="addborder(1)" onMouseOut="addborders(1)" id="add_ph1">
+        	<img src="images/eight.jpg"/>
+            <p class="eight_ph_1_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_1_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_1_p3">原价：￥52.80元</p>
+        </div>
+          <div class="ph_1" onMouseOver="addborder(2)" onMouseOut="addborders(2)" id="add_ph2">
+        	<img src="images/eight.jpg"/>
+            <p class="eight_ph_1_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_1_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_1_p3">原价：￥52.80元</p>
+        </div>
+          <div class="ph_1" onMouseOver="addborder(3)" onMouseOut="addborders(3)" id="add_ph3">
+        	<img src="images/eight.jpg"/>
+            <p class="eight_ph_1_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_1_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_1_p3">原价：￥52.80元</p>
+        </div>
+         <div class="ph_4" onMouseOver="addborder(4)" onMouseOut="addborders(4)" id="add_ph4">
+        	<img src="images/eight.jpg" width="214" height="228"/>
+            <p class="eight_ph_4_p1">林师傅 哈蜜瓜</p>
+             <p class="eight_ph_4_p2"><span>￥40.80</span>  1个</p>
+              <p class="eight_ph_4_p3">原价：￥52.80元</p>
+        </div>
+         </div>
+     </div>    
+<!--礼盒下后四个图-->
+ <div class="nexteight_big">
+     	<!--向前点图片-->
+        <div class="leftdiv1" id="lefthh">
+        		<div class="lefts" onClick="leftbttt()"><</div>
+                <div class="rights" onClick="leftbtl()">></div>
+        </div>
+         <div class="leftdiv" id="lefth">
+        		<div class="lefts" onClick="leftbtt()"><</div>
+                <div class="rights" onClick="leftbttl()">></div>
+        </div>
+        <!--主界面-->
+     	<div class="nexteight" id="btzj">
+        <div class="leftd" onClick="leftbt()"><</div>
+           		  <div class="ph_1" onMouseOver="showo(1)" onMouseOut="hideo(1)">
+                <img src="images/eight.jpg" width="228" height="228" alt="tu"/>
+            </div>
+             <!--隐藏div-->
+             	  <div class="hide_div1" id="op1" onMouseOver="showo(1)" onMouseOut="hideo(1)">
+                    <p class="hide_p1">越南百焦果5斤装</p>
+                    <p class="hide_p01">越南百焦果5斤装越南百焦果5斤装越南百焦果5斤装</p>
+                    <p class="hide_p001"><span>￥39.00</span> 2斤</p>
+                </div>
+         		  <div class="ph_1" onMouseOver="showo(2)" onMouseOut="hideo(2)">
+        	<img src="images/eight.jpg"/>
+        </div>
+        	 <!--隐藏div-->
+        		 <div class="hide_div2" id="op2" onMouseOver="showo(2)" onMouseOut="hideo(2)">
+                    <p class="hide_p2">越南百焦果5斤装</p>
+                    <p class="hide_p02">越南百焦果5斤装越南百焦果5斤装越南百焦果5斤装</p>
+                    <p class="hide_p002"><span>￥39.00</span> 2斤</p>
+                </div>
+      			   <div class="ph_1" onMouseOver="showo(3)" onMouseOut="hideo(3)">
+        	<img src="images/eight.jpg"/>
+        </div>
+        	 <!--隐藏div-->
+        		 <div class="hide_div3" id="op3" onMouseOver="showo(3)" onMouseOut="hideo(3)">
+                    <p class="hide_p3">越南百焦果5斤装</p>
+                    <p class="hide_p03">越南百焦果5斤装越南百焦果5斤装越南百焦果5斤装</p>
+                    <p class="hide_p003"><span>￥39.00</span> 2斤</p>
+                </div>
+     		       <div class="ph_4" onMouseOver="showo(4)" onMouseOut="hideo(4)">
+        	<img src="images/eight.jpg" width="228" height="228"/>
+        </div>
+        	 <!--隐藏div-->
+        		 <div class="hide_div4" id="op4" onMouseOver="showo(4)" onMouseOut="hideo(4)">
+                    <p class="hide_p4">越南百焦果5斤装</p>
+                    <p class="hide_p04">越南百焦果5斤装越南百焦果5斤装越南百焦果5斤装</p>
+                    <p class="hide_p004"><span>￥39.00</span> 2斤</p>
+                </div>
+                
+         <div class="rightd" onClick="rightbt()">></div>
+        </div>
+        <!--向后点图片-->
+          <div class="rightdiv" id="righth">
+        		<div class="lefts" onClick="rightbtr()"><</div>
+                <div class="rights" >></div>
+        </div>
+       
+     </div>
+ <!--多仓发货-->
+<div class="fahuo_big">
+	<div class="fahuo">
+    	<div class="fahuo_div01">
+        	<img src="images/fahuo.png"/>
+            多仓发货
+            <img src="images/fahuo_xie.png"/>
+        </div>
+        <div class="fahuo_div1">
+        	<img src="images/fahuo.png"/>
+            多仓发货
+            <img src="images/fahuo_xie.png"/>
+        </div>
+        <div class="fahuo_div1">
+        	<img src="images/fahuo.png"/>
+            多仓发货
+            <img src="images/fahuo_xie.png"/>
+        </div>
+        <div class="fahuo_div1">
+        	<img src="images/fahuo.png"/>
+            多仓发货
+            <img src="images/fahuo_xie.png"/>
+        </div>
+         <div class="fahuo_div1">
+        	<img src="images/fahuo.png"/>
+            多仓发货
+        </div>
+    </div>
+</div>
+<!--新手指南-->
+<div class="zhinan_big">
+	<div class="zhinan">
+        <div class="zhinan_divl">
+            <p class="zhinan_divl_p1">新手指南</p>
+            <ul>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+            </ul>
+        </div>
+        <div class="zhinan_divl">
+            <p class="zhinan_divl_p1">新手指南</p>
+            <ul>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+            </ul>
+        </div>
+        <div class="zhinan_divl">
+            <p class="zhinan_divl_p1">新手指南</p>
+            <ul>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+            </ul>
+        </div>
+        <div class="zhinan_divl">
+            <p class="zhinan_divl_p1">新手指南</p>
+            <ul>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+            </ul>
+        </div>
+        <div class="zhinan_divl">
+            <p class="zhinan_divl_p1">新手指南</p>
+            <ul>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+                <li><a href="#">购物流程</a></li>
+            </ul>
+        </div>
+        <img class="baixian" src="images/baixian.png"  width="1" height="127"/>
+       <div class="fahuo_right">
+       	<img src="images/fahuo_right.png"/>
+        <img src="images/fahuo_right.png"/>
+         <p>客服电话：0371-8356299</p>
+         <p>地址：上海市闵行区</p>
+       </div>
+    </div>
+
+</div>
+
+<!--bottom-->
+<div class="bottom_big">
+	<div class="bottom">
+    	Copyright ©2005-2014 阿七果园子 aqishop.com All Rights Reserved　 浙ICP备14024836号-1
+    </div>
+
+</div>
+</body>
+</html>
