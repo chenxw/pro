@@ -1,0 +1,23 @@
+/* CSS Document */
+html,body,div,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h4,h5,h6{ padding:0px; margin:0px;}
+form,select,input,img{ border:0; margin:0px; padding:0px;}
+input,img{ vertical-align:middle;}
+li{ list-style:none;}
+a{ text-decoration:none;}
+.clear{ font-size:0px; clear:both;}
+body {
+	height: 100%;
+	width: 100%;
+	font-size:12px;
+	font-family:"宋体",Arial;
+	color:#000;
+}
+.login-form{ width:500px; height:350px; margin:auto; border:1px solid #CCC; margin-top:50px;}
+table{ margin:auto;width:500px;line-height:60px; margin-top:50px;}
+.align-one{ width:100px; text-align:right; padding-right:10px;}
+.align-one a{text-decoration:none; color:#000;}
+.align-two{ width:215px;}
+.align-two input{ border:1px solid #CCC; width:200px;}
+.register{ text-decoration:none; padding-left:155px; color:#000;}
+.login-btn{ width:100px; height:30px; background-color:#F90; margin:15px 188px; color:#000;}
+

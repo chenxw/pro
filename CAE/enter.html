@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CAE活动报名</title>
+<link type="text/css" href="css/enter.css" rel="stylesheet"/>
+<script src="js/register.js" type="text/javascript"></script>
+<link type="text/css" href="css/index.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="css/lrtk.css">
+<script src="js/jquery1.42.min.js" type="text/javascript"></script>
+<script src="js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<!--top-->
+<div id="top_big">
+  <div class="top"> 
+  	<img src="photos/top_date.png" class="img_first"  width="16" height="16" alt="top_date"/> 
+    <span class="span_date">今天是：2016年4月12日</span> 
+    <img src="photos/login.png" class="img_second" width="15" height="16" alt="login" /> 
+    <span class="login"><a href="login.html">登录</a></span> 
+    <img src="photos/register.png"  class="img_third"  width="18" height="16" alt="register" /> 
+    <span class="registerword"><a href="register.html">注册</a></span>
+    </div>
+</div>
+
+<!--logo-->
+<div>
+  <div class="logo"> <img class="logo_img" src="photos/logo.png" width="370" height="51" alt="logo" />
+    <input type="text" class="search_input" />
+    <a href="#" class="search_btn"></a> </div>
+</div>
+<!--导航-->
+<div id="nav_big">
+  <div class="nav">
+    <div class="nav_div0" onMouseOver="show(1)" onMouseOut="hide(1)" id="div1" onclick="show_index()">首页</div>
+    <ul class="add1" id="ul1" onMouseOver="show(1)" onMouseOut="hide(1)">
+      <li>详细信息</li>
+      <li>首页详情</li>
+    </ul>
+    <div class="nav_div1" onMouseOver="show(2)" onMouseOut="hide(2)" id="div2">关于联盟</div>
+    <ul class="add2" id="ul2" onMouseOver="show(2)" onMouseOut="hide(2)">
+      <li onMouseOver="changeyellow(1)" onMouseOut="changenull(1)" id="lii1" onclick="alter()">详细信息</li>
+      <li onMouseOver="changeyellow(2)" onMouseOut="changenull(2)" id="lii2" onclick="alterl()">首页详情</li>
+    </ul>
+    <div class="nav_div1" onMouseOver="show(3)" onMouseOut="hide(3)" id="div3">新闻动态</div>
+    <ul class="add3" id="ul3" onMouseOver="show(3)" onMouseOut="hide(3)">
+      <li>详细信息</li>
+      <li>首页详情</li>
+    </ul>
+    <div class="nav_div1" onMouseOver="show(4)" onMouseOut="hide(4)" id="div4">活动专区</div>
+    <ul class="add4" id="ul4" onMouseOver="show(4)" onMouseOut="hide(4)">
+      <li onMouseOver="changeyellow(3)" onMouseOut="changenull(3)"><a href="activity.html" id="lii3">活动页面</a></li>
+      <li onMouseOver="changeyellow(4)" onMouseOut="changenull(4)"><a href="enter.html" id="lii4">活动报名</a></li>
+    </ul>
+    <div class="nav_div1" onMouseOver="show(5)" onMouseOut="hide(5)" id="div5">互动专区</div>
+    <ul class="add5" id="ul5" onMouseOver="show(5)" onMouseOut="hide(5)">
+      <li>详细信息</li>
+      <li>首页详情</li>
+    </ul>
+    <div class="nav_div1" onMouseOver="show(6)" onMouseOut="hide(6)" id="div6">案例库</div>
+    <ul class="add6" id="ul6" onMouseOver="show(6)" onMouseOut="hide(6)">
+      <li>详细信息</li>
+      <li>首页详情</li>
+    </ul>
+  </div>
+</div>
+
+<div class="enter-big">
+	<h3>活动报名</h3>
+    <table>
+  <tr>
+    <td class="align-one">姓名：</td>
+    <td><input type="text" name="name" class="input-border" /></td>
+  </tr>
+  <tr>
+    <td class="align-one">电话：</td>
+    <td><input type="tel" name="tel" class="input-border"/></td>
+  </tr>
+  <tr>
+    <td class="align-one">公司名称：</td>
+    <td><input type="text" name="company" class="input-border"/></td>
+  </tr>
+  <tr>
+    <td class="align-one">邮箱：</td>
+    <td><input type="email" class="input-border" class="input-border"/></td>
+  </tr>
+  <tr>
+    <td class="align-one">活动选择：</td>
+    <td><select name="activity" class="select-border">
+          <option value="activity-one" selected="selected">活动一</option>
+          <option value="activity-two">活动二</option>
+          <option value="activity-three">活动三</option>
+         </select></td>
+  </tr>
+  <tr>
+    <td colspan="2"><input type="submit" value="提交" class="tijiao-btn" /></td>
+  </tr>
+</table>
+
+</div>
+<!--bottom-->
+<div id="bottom_big">
+  <div class="bottom">
+    <p class="bottom_p1"> 关于我们        联系我们 </p>
+    <p class="bottom_p2"> 京ICP备14007358号-1 / 京公网安备11010802014104号 / Powered by © 2008-2015 UI.CN </p>
+    <p class="bottom_p2"> 运营单位：中国工业软件产业发展联盟CAE分联盟       网站支持：上海海基盛元信息科技有限公司 </p>
+    <p class="bottom_p3"> 您是本站第<span>896623</span>位访客 </p>
+  </div>
+</div>
+
+</body>
+</html>

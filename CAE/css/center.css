@@ -1,0 +1,48 @@
+/* CSS Document */
+html,body,div,ul,ol,li,dl,dt,dd,p{ padding:0px; margin:0px;}
+form,select,input,img{ border:0; margin:0px; padding:0px;}
+input,img{ vertical-align:middle;}
+li{ list-style:none;}
+a{ text-decoration:none;}
+.clear{ font-size:0px; clear:both;}
+body {
+	height: 100%;
+	width: 100%;
+	font-size:12px;
+	font-family:"宋体",Arial;
+	color:#000;
+}
+
+.topzx-big{ background-color:#f5f5f5; border-bottom:3px solid #538ecb;}
+.topzx{ width:980px; height:32px; line-height:32px; margin:auto;}
+.topzx span{ display:block; width:80px; height:32px; color:#FFF; font-weight:bold; font-size:16px; margin-left:15px; margin-bottom:0px; background-color:#538ecb; text-align:center;}
+.left-list{ width:20%; height:265px; border:1px solid #c5d5df;margin:10px 15px; float:left;}
+.list-title{ height:27px; background-color:#f3f7fb; line-height:27px;}
+.list-title span{ color:#386eaa; font-weight:bold; padding-left:10px;}
+.left-list ul{ height:60px;}
+.left-list ul li{ margin:12px 12px; }
+.left-list ul li a{color:#000;}
+/*所有的个人信息*/
+.right-content{ width:76%; margin-top:10px; height:560px; float:right;border:1px solid #c5d5df;}
+.grxx{ height:70px; line-height:70px;border:1px solid #c5d5df; margin:10px;}
+.grxx p{ height:50px; border-bottom:1px solid #efefef; margin-left:10px;}
+.grxx p span{ color:#ff6c00; font-weight:bold; font-size:18px;}
+.xingxixx{ height:430px; border:1px solid #c5d5df; margin:10px;}
+.table-xinxi{ margin:10px; width:700px; height:380px;}
+.table-xinxi tr td{ width:400px; border-bottom:1px solid #efefef; padding-left:60px;}
+/*修改个人信息*/
+.alter-xinxi-div{ display:none;}
+.alterxx-style{ width:500px; height:500px;border:1px solid #c5d5df; margin:10px;}
+.table-style{ width:500px; line-height:35px; margin:auto; margin-top:15px;}
+.align-one{ width:100px; text-align:right; padding-right:10px;}
+.xing{ color:red;}
+.align-two{ width:215px;}
+.align-two input{ border:1px solid #CCC; width:200px;}
+.align-two select{ border:1px solid #CCC; width:200px;}
+.tijiao{ margin:15px 105px; width:100px; height:30px; background-color:#ff981c;}
+/*修改邮箱密码*/
+.alter-email-div{ display:none;}
+.alteremail-style{ width:500px; height:300px;border:1px solid #c5d5df; margin:10px; }
+/*意见反馈*/
+.yijian-div{ display:none;}
+.yijian-style{width:500px; height:300px;border:1px solid #c5d5df; margin:10px;}

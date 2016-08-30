@@ -1,0 +1,22 @@
+/* CSS Document */
+html,body,div,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h4,h5,h6{ padding:0px; margin:0px;}
+form,select,input,img{ border:0; margin:0px; padding:0px;}
+input,img{ vertical-align:middle;}
+li{ list-style:none;}
+a{ text-decoration:none;}
+.clear{ font-size:0px; clear:both;}
+body {
+	height: 100%;
+	width: 100%;
+	font-size:12px;
+	font-family:"宋体",Arial;
+	color:#000;
+}
+
+.enter-big{ margin:30px auto; width:500px; height:500px; border:1px solid #CCC; }
+h3{ margin:20px 200px;}
+table{ width:500px; line-height:50px;}
+.align-one{ width:100px; text-align:right; padding-right:10px;}
+.input-border{ border:1px solid #CCC; width:300px;}
+.select-border{border:1px solid #CCC; width:305px;}
+.tijiao-btn{ width:100px; height:30px; margin:30px 188px; background-color:#F90;}

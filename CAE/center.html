@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link type="text/css" href="css/center.css" rel="stylesheet" />
+<script type="text/javascript" src="js/center_alterxx.js"></script>
+
+<link type="text/css" href="css/index.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="css/lrtk.css">
+<script src="js/jquery1.42.min.js" type="text/javascript"></script>
+<script src="js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+<!--top-->
+<div id="top_big">
+  <div class="top"> 
+  	<img src="photos/top_date.png" class="img_first"  width="16" height="16" alt="top_date"/> 
+    <span class="span_date">今天是：2016年4月12日</span> 
+    <img src="photos/login.png" class="img_second" width="15" height="16" alt="login" /> 
+    <span class="login"><a href="login.html">登录</a></span> 
+    <img src="photos/register.png"  class="img_third"  width="18" height="16" alt="register" /> 
+    <span class="registerword"><a href="register.html">注册</a></span>
+    </div>
+</div>
+
+<!--logo-->
+<div>
+  <div class="logo"> <img class="logo_img" src="photos/logo.png" width="370" height="51" alt="logo" />
+    <input type="text" class="search_input" />
+    <a href="#" class="search_btn"></a> </div>
+</div>
+<!--导航-->
+<div id="nav_big">
+  <div class="nav">
+    <div class="nav_div0" onMouseOver="show(1)" onMouseOut="hide(1)" id="div1" onclick="show_index()">首页</div>
+    <ul class="add1" id="ul1" onMouseOver="show(1)" onMouseOut="hide(1)">
+      <li>详细信息</li>
+      <li>首页详情</li>
+    </ul>
+    <div class="nav_div1" onMouseOver="show(2)" onMouseOut="hide(2)" id="div2">关于联盟</div>
+    <ul class="add2" id="ul2" onMouseOver="show(2)" onMouseOut="hide(2)">
+      <li onMouseOver="changeyellow(1)" onMouseOut="changenull(1)" id="lii1" onclick="alter()">详细信息</li>
+      <li onMouseOver="changeyellow(2)" onMouseOut="changenull(2)" id="lii2" onclick="alterl()">首页详情</li>
+    </ul>
+    <div class="nav_div1" onMouseOver="show(3)" onMouseOut="hide(3)" id="div3">新闻动态</div>
+    <ul class="add3" id="ul3" onMouseOver="show(3)" onMouseOut="hide(3)">
+      <li>详细信息</li>
+      <li>首页详情</li>
+    </ul>
+    <div class="nav_div1" onMouseOver="show(4)" onMouseOut="hide(4)" id="div4">活动专区</div>
+    <ul class="add4" id="ul4" onMouseOver="show(4)" onMouseOut="hide(4)">
+      <li onMouseOver="changeyellow(3)" onMouseOut="changenull(3)"><a href="activity.html" id="lii3">活动页面</a></li>
+      <li onMouseOver="changeyellow(4)" onMouseOut="changenull(4)"><a href="enter.html" id="lii4">活动报名</a></li>
+    </ul>
+    <div class="nav_div1" onMouseOver="show(5)" onMouseOut="hide(5)" id="div5">互动专区</div>
+    <ul class="add5" id="ul5" onMouseOver="show(5)" onMouseOut="hide(5)">
+      <li>详细信息</li>
+      <li>首页详情</li>
+    </ul>
+    <div class="nav_div1" onMouseOver="show(6)" onMouseOut="hide(6)" id="div6">案例库</div>
+    <ul class="add6" id="ul6" onMouseOver="show(6)" onMouseOut="hide(6)">
+      <li>详细信息</li>
+      <li>首页详情</li>
+    </ul>
+  </div>
+</div>
+
+<div class="topzx-big">
+  <div class="topzx"> <span>管理中心</span> </div>
+</div>
+<div>
+	<div style="width:980px; margin:auto;">
+	<!--左侧列表-->
+  <div class="left-list">
+    <p class="list-title"><span>管理中心</span></p>
+    <ul>
+      <li><a href="#">软件申报</a></li>
+      <li><a href="#">我的软件</a></li>
+    </ul>
+    <p class="list-title"><span>账号管理</span></p>
+    <ul>
+      <li><a href="#" onClick="alterxx()">修改个人信息</a></li>
+      <li><a href="#" onClick="alteremailpwd()">修改邮箱/密码</a></li>
+    </ul>
+    <p class="list-title"><span>联系我们</span></p>
+    <ul>
+      <li><a href="#" onClick="yijian()">意见反馈</a></li>
+    </ul>
+  </div>
+  <!--右侧内容-->
+  <div class="right-content">
+  	<!--所有的个人信息-->
+  	<div id="all-xinxi">
+    <!--个人信息-->
+     <p class="list-title"><span>个人信息</span></p>
+    <div class="grxx">
+      <p> <span>infanta(925116125@qq.com)</span> </p>
+    </div>
+    <!--详细信息-->
+    <div class="xingxixx">
+      <p class="list-title"><span>详细信息</span></p>
+      <table class="table-xinxi">
+        <tr>
+          <td>用户名：infanta</td>
+        </tr>
+        <tr>
+          <td>所属模型：联名会员</td>
+        </tr>
+        <tr>
+          <td>注册时间：2016-06-01 16:14:00</td>
+        </tr>
+        <tr>
+          <td>最后登录时间：2016-06-01 16:14:00</td>
+        </tr>
+        <tr>
+          <td>注册ip:182.201.173.189</td>
+        </tr>
+        <tr>
+          <td>上次登录ip：</td>
+        </tr>
+        <tr>
+          <td>真实姓名：刘桐瑄</td>
+        </tr>
+        <tr>
+          <td>性别：女</td>
+        </tr>
+        <tr>
+          <td>年龄：20-29岁</td>
+        </tr>
+        <tr>
+          <td>工作单位：因特工程仿真技术（大连）有限公司</td>
+        </tr>
+        <tr>
+          <td>工作岗位：行政</td>
+        </tr>
+        <tr>
+          <td>电话：15840693627</td>
+        </tr>
+      </table>
+    </div>
+    </div>
+     <!--修改个人信息-->
+     <div id="alter-xinxi" class="alter-xinxi-div">
+    	<p class="list-title"><span>修改个人信息</span></p>
+    	  <table class="alterxx-style">
+        <tr>
+          <td class="align-one">用户名:</td>
+          <td class="align-two"><input type="text" name="name"/></td>
+          <td><img src="photos/gantanhao.png" />请输入用户名</td>
+        </tr>
+        <tr>
+          <td class="align-one">昵称:</td>
+          <td class="align-two"><input type="text" name="nicheng"/></td>
+          <td><img src="photos/gantanhao.png" />请输入昵称</td>
+        </tr>
+        <tr>
+          <td class="align-one"><span class="xing">*</span>真实姓名:</td>
+          <td class="align-two"><input type="text" name="nicheng"/></td>
+        </tr>
+        <tr>
+          <td class="align-one"><span class="xing">*</span>性别:</td>
+          <td><input type="radio" name="sex" value="1" />
+            男
+            <input type="radio" name="sex" value="1" />
+            女</td>
+        </tr>
+        <tr>
+          <td class="align-one"><span class="xing">*</span>年龄:</td>
+          <td class="align-two"><select name="age">
+              <option value="twenty" selected="selected">20-29岁</option>
+              <option value="thirty">30-39岁</option>
+              <option value="forty" >40-49岁</option>
+              <option value="fifty">50岁以上</option>
+            </select></td>
+        </tr>
+         <tr>
+          <td class="align-one"><span class="xing">*</span>工作单位:</td>
+          <td class="align-two" colspan="2"><input type="text" name="workaddress"/></td>
+        </tr>
+        <tr>
+          <td class="align-one"><span class="xing">*</span>工作岗位:</td>
+          <td class="align-two"><select name="job">
+              <option value="yf" selected="selected">研发</option>
+              <option value="rs">人事</option>
+              <option value="xs" >销售</option>
+              <option value="cw">财务</option>
+            </select></td>
+        </tr>
+         <tr>
+          <td class="align-one"><span class="xing">*</span>电话:</td>
+          <td class="align-two" colspan="2"><input type="tel" name="tel"/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="提交信息" class="tijiao" onclick="alterlogin()"/></td>
+            <td><a href="center.html">取消返回</a></td>
+        </tr>
+      </table>
+	</div>
+ 	 <!--修改邮箱/密码-->
+     <div id="alter-pwd-email" class="alter-email-div">
+     	<p class="list-title"><span>修改邮箱/密码</span></p>
+        <table class="alteremail-style">
+       <tr>
+          <td class="align-one">密码:</td>
+          <td class="align-two"><input type="password" name="pwd"/></td>
+          <td><img src="photos/gantanhao.png" />请输入密码</td>
+        </tr>
+        <tr>
+          <td class="align-one">确认密码:</td>
+          <td class="align-two"><input type="password" name="pwd"/></td>
+          <td><img src="photos/gantanhao.png" />请输入确认密码</td>
+        </tr>
+        <tr>
+          <td class="align-one">邮箱:</td>
+          <td class="align-two"><input type="email" name="email"/></td>
+          <td><img src="photos/gantanhao.png" />请输入邮箱</td>
+        </tr>
+       <tr>
+            <td colspan="2"><input type="submit" value="提交信息" class="tijiao" onclick="alterlogin()"/></td>
+            <td><a href="center.html">取消返回</a></td>
+        </tr>
+      </table>
+     </div>
+  <!--   意见反馈-->
+    <div id="yijian" class="yijian-div">
+     <p class="list-title"><span>意见反馈</span></p>
+  <table class="yijian-style">
+     <tr>
+      <td class="align-one"><span class="xing">*</span>服务满意度:</td>
+      <td colspan="2"><input type="radio" name="sex" value="1" />
+        100%
+        <input type="radio" name="sex" value="1" />
+        75%
+        <input type="radio" name="sex" value="1" />
+        50%
+        <input type="radio" name="sex" value="1" />
+        25%</td>
+    </tr>
+    <tr>
+      <td class="align-one"><span class="xing">*</span>活动满意度:</td>
+      <td colspan="2"><input type="radio" name="sex" value="1" />
+        100%
+        <input type="radio" name="sex" value="1" />
+        75%
+        <input type="radio" name="sex" value="1" />
+        50%
+        <input type="radio" name="sex" value="1" />
+        25%</td>
+    </tr>
+    <tr>
+    	<td class="align-one">您的建议：</td>
+        <td><textarea cols="40" rows="5" style="resize:none;"></textarea></td>
+    </tr>
+    <tr>
+    	<td colspan="2"><input type="submit" value="提交信息" class="tijiao" onclick="alterlogin()"/>
+        <a href="center.html">取消返回</a></td>
+    </tr>
+  </table>
+    </div>
+    </div>
+   </div>
+  </div>
+<!--bottom-->
+<div id="bottom_big" style="margin-top:610px;">
+  <div class="bottom">
+    <p class="bottom_p1"> 关于我们        联系我们 </p>
+    <p class="bottom_p2"> 京ICP备14007358号-1 / 京公网安备11010802014104号 / Powered by © 2008-2015 UI.CN </p>
+    <p class="bottom_p2"> 运营单位：中国工业软件产业发展联盟CAE分联盟       网站支持：上海海基盛元信息科技有限公司 </p>
+    <p class="bottom_p3"> 您是本站第<span>896623</span>位访客 </p>
+  </div>
+</div>
+
+
+</body>
+</html>

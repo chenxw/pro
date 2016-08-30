@@ -1,0 +1,25 @@
+/* 懒人图库 搜集整理 www.lanrentuku.com */
+
+/* css 重置 */
+body,div,ul,li { padding: 0; margin: 0; }
+ul { list-style: none ; }
+img { border: none; }
+a { blr: expression(this.onFocus=this.blur()); outline: none; }
+
+/*本例css*/
+.www51buycom { width: 647px; height: 351px;position: relative; overflow:hidden; float:left; }
+
+/*数字按钮样式*/
+.www51buycom .num { overflow:hidden; height: 25px; position: absolute; bottom:12px; left:252px; zoom:1; }
+.www51buycom .num li { width: 25px; height: 25px; line-height: 25px; text-align: center; font-weight: 400; font-family: "微软雅黑", Arial; color: #FFFFFF; background: #444444; margin-right: 10px; -moz-border-radius:100px;-webkit-border-radius:100px;  border-radius:100px;position:relative; behavior:url(C:\Users\Administrator\Desktop\iecss3\iecss3);cursor:pointer; float: left; }
+.www51buycom .num li.on { background: #FF7700; } /*当前项*/
+.tab{ width:647px; height:69px; background-color:#000;filter:alpha(opacity=60); opacity:0.6; position:absolute; bottom:0px;}
+
+/*上一个  下一个*/
+.www51buycom .prev,
+.www51buycom .next{ width: 40px; height: 69px; font-size:46px; color:#FFF; font-weight:bold; position: absolute; bottom: 0px; background-color:#000; filter:alpha(opacity=60);opacity:0.6; text-align:center; z-index:1;}
+.www51buycom .prev { left: 0; }
+.www51buycom .next{ right: 0;}
+.www51buycom .prev span{ position:absolute; top:9px; left:6px;}
+.www51buycom .next span{ position:absolute; top:9px; right:6px;}
+
