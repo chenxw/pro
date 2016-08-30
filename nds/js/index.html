@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>东线国防生</title>
+<link  type="text/css" rel="stylesheet" href="../css/css.css"/>
+<script type="text/javascript" src="index.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+function $(id) { return document.getElementById(id); }
+
+function addLoadEvent(func){
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function(){
+			oldonload();
+			func();
+		}
+	}
+}
+
+function moveElement(elementID,final_x,final_y,interval) {
+  if (!document.getElementById) return false;
+  if (!document.getElementById(elementID)) return false;
+  var elem = document.getElementById(elementID);
+  if (elem.movement) {
+    clearTimeout(elem.movement);
+  }
+  if (!elem.style.left) {
+    elem.style.left = "0px";
+  }
+  if (!elem.style.top) {
+    elem.style.top = "0px";
+  }
+  var xpos = parseInt(elem.style.left);
+  var ypos = parseInt(elem.style.top);
+  if (xpos == final_x && ypos == final_y) {
+		return true;
+  }
+  if (xpos < final_x) {
+    var dist = Math.ceil((final_x - xpos)/10);
+    xpos = xpos + dist;
+  }
+  if (xpos > final_x) {
+    var dist = Math.ceil((xpos - final_x)/10);
+    xpos = xpos - dist;
+  }
+  if (ypos < final_y) {
+    var dist = Math.ceil((final_y - ypos)/10);
+    ypos = ypos + dist;
+  }
+  if (ypos > final_y) {
+    var dist = Math.ceil((ypos - final_y)/10);
+    ypos = ypos - dist;
+  }
+  elem.style.left = xpos + "px";
+  elem.style.top = ypos + "px";
+  var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
+  elem.movement = setTimeout(repeat,interval);
+}
+
+function classNormal(iFocusBtnID,iFocusTxID){
+	var iFocusBtns= $(iFocusBtnID).getElementsByTagName('li');
+	var iFocusTxs = $(iFocusTxID).getElementsByTagName('li');
+	for(var i=0; i<iFocusBtns.length; i++) {
+		iFocusBtns[i].className='normal';
+		iFocusTxs[i].className='normal';
+	}
+}
+
+function classCurrent(iFocusBtnID,iFocusTxID,n){
+	var iFocusBtns= $(iFocusBtnID).getElementsByTagName('li');
+	var iFocusTxs = $(iFocusTxID).getElementsByTagName('li');
+	iFocusBtns[n].className='current';
+	iFocusTxs[n].className='current';
+}
+
+function iFocusChange() {
+	if(!$('ifocus')) return false;
+	$('ifocus').onmouseover = function(){atuokey = true};
+	$('ifocus').onmouseout = function(){atuokey = false};
+	var iFocusBtns = $('ifocus_btn').getElementsByTagName('li');
+	var listLength = iFocusBtns.length;
+	iFocusBtns[0].onmouseover = function() {
+		moveElement('ifocus_piclist',0,0,5);
+		classNormal('ifocus_btn','ifocus_tx');
+		classCurrent('ifocus_btn','ifocus_tx',0);
+	}
+	if (listLength>=2) {
+		iFocusBtns[1].onmouseover = function() {
+			moveElement('ifocus_piclist',0,-225,5);
+			classNormal('ifocus_btn','ifocus_tx');
+			classCurrent('ifocus_btn','ifocus_tx',1);
+		}
+	}
+	if (listLength>=3) {
+		iFocusBtns[2].onmouseover = function() {
+			moveElement('ifocus_piclist',0,-450,5);
+			classNormal('ifocus_btn','ifocus_tx');
+			classCurrent('ifocus_btn','ifocus_tx',2);
+		}
+	}
+	if (listLength>=4) {
+		iFocusBtns[3].onmouseover = function() {
+			moveElement('ifocus_piclist',0,-675,5);
+			classNormal('ifocus_btn','ifocus_tx');
+			classCurrent('ifocus_btn','ifocus_tx',3);
+		}
+	}
+}
+
+setInterval('autoiFocus()',5000);
+var atuokey = false;
+function autoiFocus() {
+	if(!$('ifocus')) return false;
+	if(atuokey) return false;
+	var focusBtnList = $('ifocus_btn').getElementsByTagName('li');
+	var listLength = focusBtnList.length;
+	for(var i=0; i<listLength; i++) {
+		if (focusBtnList[i].className == 'current') var currentNum = i;
+	}
+	if (currentNum==0&&listLength!=1 ){
+		moveElement('ifocus_piclist',0,-225,5);
+		classNormal('ifocus_btn','ifocus_tx');
+		classCurrent('ifocus_btn','ifocus_tx',1);
+	}
+	if (currentNum==1&&listLength!=2 ){
+		moveElement('ifocus_piclist',0,-450,5);
+		classNormal('ifocus_btn','ifocus_tx');
+		classCurrent('ifocus_btn','ifocus_tx',2);
+	}
+	if (currentNum==2&&listLength!=3 ){
+		moveElement('ifocus_piclist',0,-675,5);
+		classNormal('ifocus_btn','ifocus_tx');
+		classCurrent('ifocus_btn','ifocus_tx',3);
+	}
+	if (currentNum==3 ){
+		moveElement('ifocus_piclist',0,0,5);
+		classNormal('ifocus_btn','ifocus_tx');
+		classCurrent('ifocus_btn','ifocus_tx',0);
+	}
+	if (currentNum==1&&listLength==2 ){
+		moveElement('ifocus_piclist',0,0,5);
+		classNormal('ifocus_btn','ifocus_tx');
+		classCurrent('ifocus_btn','ifocus_tx',0);
+	}
+	if (currentNum==2&&listLength==3 ){
+		moveElement('ifocus_piclist',0,0,5);
+		classNormal('ifocus_btn','ifocus_tx');
+		classCurrent('ifocus_btn','ifocus_tx',0);
+	}
+}
+addLoadEvent(iFocusChange);
+</script>
+
+
+
+
+
+
+</head>
+
+<body>
+<div id="container">
+<!--top-->
+	<div class="top">
+    	<img src="../images/small_banner.jpg" width="950px" height="91" alt="top" />
+    </div>
+<!-- logo导航-->
+	<div class="logo_nav">
+    	<div class="logo">
+        	<img src="../images/logo.jpg" width="154" height="107" alt="logo"/>
+        </div>
+        <ul class="nav">
+        <li><a href="#" class="range">政策法规</a>
+        <a href="#">国防生故事</a>
+        <a href="#"> 解疑释惑 </a>
+        <a href="#">网上调查</a>
+        <a href="#"> 签约高校 </a>
+        <a href="#">推荐网站</a>                         
+        </li>
+        <li><a href="#" class="range">政策法规</a>
+        <a href="#">国防生故事</a>
+        <a href="#"> 解疑释惑 </a>
+        <a href="#">网上调查</a>
+        <a href="#"> 签约高校 </a>
+        <a href="#">推荐网站</a>                         
+        </li>
+        <li><a href="#" class="range">政策法规</a>
+        <a href="#">国防生故事</a>
+        <a href="#"> 解疑释惑 </a>
+        <a href="#">网上调查</a>
+        <a href="#"> 签约高校 </a>
+        <a href="#">推荐网站</a>                         
+        </li>
+        </ul>
+    </div>
+<!-- 搜索-->
+     <div class="search">
+    	<div class="sou">
+    	<form action="#" method="post" >
+        <input type="text"  name="title" value="请输入搜索内容"  onclick="this.value=''"class="content"/><input type="image" src="../images/search.jpg" width="50px" height="23px" />
+        </form>
+        </div>
+        <div class="login">
+        <form action="#" method="post">
+        用户名：<input type="text"  name="username" class="username"/>
+        密码：<input type="password"  name="pwd" class="username"/>
+		<input type="image" src="../images/denglu.jpg"  width="40px" height="20"/>
+        <a href="#" >注册</a>
+        <a href="#" >密码</a>
+        </form>
+        </div>
+    </div>
+<!--banner图-->
+    <div id="banner">
+    <!--左图-->
+    	<div class="banner_left">
+        	<div id="ifocus">
+	<div id="ifocus_pic">
+		<div id="ifocus_piclist" style="left:0; top:0;">
+			<ul>
+				<li><a href="http://www.cnfen.com/" target="_blank"><img src="../images/01.jpg" alt="易站分享" /></a></li>
+				<li><a href="http://www.cnfen.com/" target="_blank"><img src="../images/02.jpg" alt="易站分享" /></a></li>
+				<li><a href="http://www.cnfen.com/" target="_blank"><img src="../images/03.jpg" alt="易站分享" /></a></li>
+				<li><a href="http://www.cnfen.com/" target="_blank"><img src="../images/04.jpg" alt="易站分享" /></a></li>
+			</ul>
+		</div>
+		<div id="ifocus_opdiv"></div>
+		<div id="ifocus_tx">
+			<ul>
+				<li class="current">易站分享 焦点图 a1</li>
+				<li class="normal">易站分享 焦点图 b2</li>
+				<li class="normal">易站分享 焦点图 c3</li>
+				<li class="normal">易站分享 焦点图 d4</li>
+			</ul>
+		</div>
+	</div>
+	<div id="ifocus_btn">
+		<ul>
+			<li class="current"><img src="../images/btn_01.jpg" alt="" /></li>
+			<li class="normal"><img src="../images/btn_02.jpg" alt="" /></li>
+			<li class="normal"><img src="../images/btn_03.jpg" alt="" /></li>
+			<li class="normal"><img src="../images/btn_04.jpg" alt="" /></li>
+		</ul>
+	</div>
+</div>
+<p>
+            
+            
+            
+            
+        	
+    	</div>
+     <!--右表-->
+    	<div class="tab_right">
+        	<ul class="tab_right_top">
+            	<li onmouseover="nanfang(1)">南方军区</li>
+                <li onmouseover="nanfang(2)">南方军区</li>
+                <li onmouseover="nanfang(3)">南方军区</li>
+            </ul>
+            <div class="tab_right_bottom">
+            	<div id="nanfangs1">
+            	<h1>政府举会议</h1>
+                <p class="tab_right_bottom_p">新华社北京新华北京新华社北京新华社北京新华社北京新华社北京新新华社北京新京新华社华社北京新华社...<a href="#">[详情]</a></p>
+                <ul  class="tab_right_bottom_ul">
+                	<li><span >[2016-3-11]</span><a href="#">新华社北京新华北京新华社北京新华社北</a></li>
+                  <li><span >[2016-3-11]</span><a href="#">新华社北京新华北京新华社北京新华社北</a></li>
+                  <li><span >[2016-3-11]</span><a href="#">新华社北京新华北京新华社北京新华社北</a></li>
+                  <li><span >[2016-3-11]</span><a href="#">新华社北京新华北京新华社北京新华社北</a></li>
+                  <li><span >[2016-3-11]</span><a href="#">新华社北京新华北京新华社北京新华社北</a></li>
+                  <li><span >[2016-3-11]</span><a href="#">新华社北京新华北京新华社北京新华社北</a></li>
+                </ul>
+                </div>
+                <div id="nanfangs2" style="display:none">sssssssssssssssssssssssss</div>
+                <div id="nanfangs3" style="display:none"> ffffffffffffffffffffffffffffff</div>
+            </div>
+    	</div>
+	</div>
+<!--内容main-->
+	<div id="main">
+    	<!--main左边-->
+    	<div class="main_left"> 
+        	<h1><p><span class="float_right"><a href="#">更多>></a></span>>> 学习教育</p></h1>
+            <ul class="clear">
+            	<li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+            </ul>
+            <h1 class="twoh1"><p><span  class="float_right"><a href="#">更多>></a></span>>> 学习教育</p></h1>
+            <ul class="clear">
+            	<li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+            </ul>
+             <h1 class="twoh1"><p><span  class="float_right"><a href="#">更多>></a></span>>> 学习教育</p></h1>
+            <ul class="clear">
+            	<li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+               <li><a href="#">中证干部领导</a></li>
+            </ul>
+        </div>
+        <!--main中间-->
+         <div class="main_content">
+      	<h1><span  class="float_right"><a href="#">更多>></a></span>国防生故事</h1>
+        <h2> 政治局会议研究</h2>
+        <ul>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+        </ul>
+         <h1 class="main_content_two"><span  class="float_right"><a href="#">更多>></a></span>国防生故事</h1>
+        <h2> 政治局会议研究</h2>
+        <ul>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+        </ul>
+         <h1><span  class="float_right"><a href="#">更多>></a></span>国防生故事</h1>
+        <h2> 政治局会议研究</h2>
+        <ul>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+               <li><a href="#">中证干部领导中证干部领导中证干中证干部领干部领导部领导</a></li>
+        </ul>
+         </div>
+        <!--main右边-->
+         <div class="main_right">
+     	<div class="main_right_first">
+        	<p>解释疑惑<br /><span>anawer the quester</span></p>
+            <ul>
+            	<li><a href="#">济南军区济南军区济南军区</a></li>
+                <li><a href="#">济南军区济南军区济南军区</a></li>
+                <li><a href="#">济南军区济南军区济南军区</a></li>
+            </ul>
+        </div>
+         <div class="main_right_first main_right_first_public">
+        	<p>解释疑惑<br /><span>anawer the quester</span></p>
+            <ul>
+            	<li><a href="#">济南军区济南军区济南军区</a></li>
+                <li><a href="#">济南军区济南军区济南军区</a></li>
+                <li><a href="#">济南军区济南军区济南军区</a></li>
+            </ul>
+        </div>
+         <div class="main_right_first  main_right_first_public">
+        	<p>解释疑惑<br /><span>anawer the quester</span></p>
+            <ul>
+            	<li><a href="#">济南军区济南军区济南军区</a></li>
+                <li><a href="#">济南军区济南军区济南军区</a></li>
+                <li><a href="#">济南军区济南军区济南军区</a></li>
+            </ul>
+        </div>
+        <div class="main_right_first  main_right_first_public">
+        	<p>解释疑惑<br /><span>anawer the quester</span></p>
+            <ul>
+            	<li><a href="#">济南军区济南军区济南军区</a></li>
+                <li><a href="#">济南军区济南军区济南军区</a></li>
+                <li><a href="#">济南军区济南军区济南军区</a></li>
+            </ul>
+        </div>
+         </div>
+	</div>
+<!--center_banner-->
+    <div class="center_banner"></div>
+<!--简约高校简介-->
+	<div  class="contract_school">
+    	<ul class="contract_school_top">
+        	<li class="introduce" onclick="qianyue(1)">签约高校简介 </li>
+            <li class="introduce_two" onclick="qianyue(2)"><img src="../images/small_tu.jpg" width="42" height="35" alt="高校" />&nbsp;签约高校简介</li>
+             <li class="introduce_three" onclick="qianyue(3)"><img src="../images/small_tu.jpg" width="42" height="35" alt="高校" />&nbsp;签约高校简介</li>
+              <li class="introduce_three" onclick="qianyue(4)"><img src="../images/small_tu.jpg" width="42" height="35" alt="高校" />&nbsp;签约高校简介</li>
+               <li class="introduce_three" onclick="qianyue(5)"><img src="../images/small_tu.jpg" width="42" height="35" alt="高校" />&nbsp;签约高校简介</li>
+               <li class="introduce_three" onclick="qianyue(6)"><img src="../images/small_tu.jpg" width="42" height="35" alt="高校" />&nbsp;签约高校简介</li>
+        </ul>
+        <div id="qianyues1">
+      		  <ul class="contract_school_text1">
+        	<li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>     
+        </ul>
+        <p class="contract_school_shu"><img src="../images/shu.jpg" /></p>
+         <ul class="contract_school_text2">
+        	<li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>     
+        </ul>
+        <p class="contract_school_shu"><img src="../images/shu.jpg" /></p>
+         <ul class="contract_school_text2">
+        	<li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>     
+        </ul>
+         </div>
+         <div id="qianyues2" style="display:none">sssssdddddddddddddddddd</div>
+         <div id="qianyues3" style="display:none">sssssssssdddddddddddddddddd</div>
+         <div id="qianyues4" style="display:none">sssdddddddd</div>
+         <div id="qianyues5" style="display:none">fff</div>
+         <div id="qianyues6" style="display:none">3333</div>
+         <div id="qianyues7" style="display:none">rrr</div>
+         <div id="qianyues8" style="display:none">ccc</div>
+
+    </div>
+<!-- 安徽大学国防生-->
+    <div  class="acontract_school">
+    	<ul class="acontract_school_top">
+        	<li class="aintroduce">签约高校简介 </li>
+            <li class="aintroduce_two"><img src="../images/small_tu.jpg" width="42" height="35" alt="高校" />&nbsp;签约高校简介</li>
+             <li class="aintroduce_three"><img src="../images/small_tu.jpg" width="42" height="35" alt="高校" />&nbsp;签约高校简介</li>
+              <li class="aintroduce_three"><img src="../images/small_tu.jpg" width="42" height="35" alt="高校" />&nbsp;签约高校简介</li>
+               <li class="aintroduce_three"><img src="../images/small_tu.jpg" width="42" height="35" alt="高校" />&nbsp;签约高校简介</li>
+               <li class="aintroduce_three"><img src="../images/small_tu.jpg" width="42" height="35" alt="高校" />&nbsp;签约高校简介</li>
+        </ul>
+        <ul class="acontract_school_text1">
+        	<li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>     
+        </ul>
+        <p class="acontract_school_shu"><img src="../images/shu.jpg" /></p>
+         <ul class="acontract_school_text2">
+        	<li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>     
+        </ul>
+        <p class="acontract_school_shu"><img src="../images/shu.jpg" /></p>
+         <ul class="acontract_school_text2">
+        	<li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>
+            <li><a href="#">在济南军区某旅网上大课堂聆听官兵心声子... </a></li>     
+        </ul>
+    </div>
+<!--国防生T型台 --> 
+    <div id="student_t">
+    	<h1 class="student_t_h1"><p><span class="float_right"><a href="#">更多>></a></span>>>&nbsp;国防生T型台</p></h1>
+        <div class="student_t_tu"><p>依托培养</p></div>
+         <div class="student_t_tu_2"><p>依托培养</p></div>
+          <div class="student_t_tu_2"><p>依托培养</p></div>
+           <div class="student_t_tu_2"><p>依托培养</p></div>
+            <div class="student_t_tu_2"><p>依托培养</p></div>
+             <div class="student_t_tu_2"><p>依托培养</p></div>
+              <div class="student_t_tu_2"><p>依托培养</p></div>
+         
+    </div>
+<!--校园DV-->
+     <div id="student_dv">
+    	<h1 class="student_dv_h1"><p><span class="float_right"><a href="#">更多>></a></span>>>&nbsp;校园DV</p></h1>
+        <div class="student_dv_tu"><p>依托培养</p></div>
+         <div class="student_dv_tu_2"><p>依托培养</p></div>
+          <div class="student_dv_tu_2"><p>依托培养</p></div>
+           <div class="student_dv_tu_2"><p>依托培养</p></div>
+            <div class="student_dv_tu_2"><p>依托培养</p></div>
+             <div class="student_dv_tu_2"><p>依托培养</p></div>
+              <div class="student_dv_tu_2"><p>依托培养</p></div>
+         
+    </div>
+<!--红色之旅-->
+    <div id="student_h">
+    	<h1 class="student_h_h1"><p><span class="float_right"><a href="#">更多>></a></span>>>&nbsp;红色之路</p></h1>
+        <div class="student_h_tu"></div>
+         <div class="student_h_tu_2"></div>
+          <div class="student_h_tu_2"></div>
+           <div class="student_h_tu_2"></div>
+            <div class="student_h_tu_2"></div>
+             <div class="student_h_tu_2"></div>
+              <div class="student_h_tu_2"></div>
+         
+    </div>
+  <!-- /* bottom*/-->
+  	<div class="bottom">
+    	<div class="bottom_top">
+        	<p class="p_1">推荐网站：<a href="#">&nbsp;人民网&nbsp;|&nbsp;新华网&nbsp;|&nbsp;新华军事&nbsp;|&nbsp;新华网&nbsp;|&nbsp;新华网&nbsp;|&nbsp;中共经济网&nbsp;|&nbsp;新华网&nbsp;|&nbsp;新华网&nbsp;|&nbsp;中共理论数据库&nbsp;|&nbsp;中共理论数据库&nbsp;|&nbsp;国际在线</a></p>
+            <p class="p_2">友情链接：<a href="#">&nbsp;中国军网&nbsp;|&nbsp;国运动员&nbsp;|&nbsp;中国政府网&nbsp;|&nbsp;外交部&nbsp;|&nbsp;中青在线&nbsp;|&nbsp;国新办&nbsp;|&nbsp;国台办&nbsp;|&nbsp;新华网&nbsp;|&nbsp;中央党校理论网</a></p>
+        </div>
+        <ul>
+        	<li>版权所有  东线国防生  </li>
+            <li style="color:#E21D02;">本网站刊登的新闻信息和专题专栏资料，均为东线国防生网版权所有，末经协议授权,禁止下载使用</li>
+            <li >Copyright ©1999-2016 Chinamil.com.cn All Rights Reserved</li>
+            <li>沪ICP备05121028号</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
